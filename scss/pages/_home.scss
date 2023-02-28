@@ -36,6 +36,29 @@
   box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
   padding: 1.5rem 2rem;
   border-radius: 1rem;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 0rem;
+    background-color: $clr-primary;
+    z-index: -1;
+    transition: 0.5s ease;
+  }
+  &:hover::before {
+    width: 50%;
+    height: 15rem;
+  }
+  &:hover a {
+    background-color: $clr-primary;
+    color: $clr-light;
+  }
   img {
     width: 20rem;
     height: 20rem;
@@ -46,10 +69,32 @@
   .item__info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
     h3 {
-      font-weight: bold;
+      font-weight: 800;
+      font-size: 2.5rem;
+    }
+    h4 {
+      font-weight: bolder;
       font-size: 2rem;
     }
+    small {
+      font-weight: bold;
+      font-size: 1.2rem;
+      opacity: 0.3;
+    }
+  }
+  .item__review {
+    h4 {
+      font-size: 1.4rem;
+      i {
+        color: $clr-primary;
+      }
+    }
+  }
+  a {
+    display: block;
+    text-align: center;
   }
 }
