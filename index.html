@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Factory</title>
     <link rel="stylesheet" href="./scss/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="header py--1">
@@ -29,9 +33,9 @@
     </div>
     <section class="banner">
       <div class="container">
-        <div class="banner__wrapper d--flex justify--between">
+        <div class="banner__wrapper d--flex justify--between align--center">
           <div class="banner__content">
-            <h1>The Best Quality Food of Your Choice</h1>
+            <h1>The Best Quality <span>Food</span> of Your Choice</h1>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
               nobis fuga tempore officia, fugit aliquam perspiciatis! Similique,
@@ -42,6 +46,34 @@
           </div>
           <div class="banner__img">
             <img src="/img/dummy.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container">
+        <div class="block__header">
+          <span>Featured Product</span>
+          <h2>Our Best Selling <span>Product</span></h2>
+        </div>
+        <div class="product__cards">
+          <div class="product__item">
+            <img src="./img/dummy.png" alt="" />
+            <div class="item__info">
+              <h3>Green Salad</h3>
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="item__info">
+              <div class="item__price">
+                <small>Price</small>
+                <h4>$10.00</h4>
+              </div>
+              <div class="item__review">
+                <small>Review</small>
+                <h4><i class="fas fa-star"></i>231</h4>
+              </div>
+            </div>
+            <a href="" class="btn btn-primary">Add to Cart</a>
           </div>
         </div>
       </div>

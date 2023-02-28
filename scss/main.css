@@ -443,6 +443,23 @@ p {
   opacity: 1;
 }
 
+.block__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.block__header span {
+  color: #ff9a1e;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.block__header h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bolder;
+}
+.block__header h2 span {
+  text-transform: capitalize;
+}
+
 .btn {
   background-color: #ff9a1e;
   padding: 0.8rem 1.8rem;
@@ -471,4 +488,24 @@ p {
 
 .banner__wrapper {
   min-height: calc(100vh - 60px);
+}
+.banner__content {
+  max-width: 50rem;
+  width: 100%;
+}
+.banner__content h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.banner__content h1 span {
+  color: #ff9a1e;
+}
+.banner__content p {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+.banner__content a:last-child {
+  margin-left: 2rem;
 }/*# sourceMappingURL=main.css.map */

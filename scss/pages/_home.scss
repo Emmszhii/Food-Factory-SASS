@@ -2,4 +2,24 @@
   &__wrapper {
     min-height: calc(100vh - 60px);
   }
+  &__content {
+    max-width: 50rem;
+    width: 100%;
+    h1 {
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-weight: bold;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      span {
+        color: $clr-primary;
+      }
+    }
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 4rem;
+    }
+    a:last-child {
+      margin-left: 2rem;
+    }
+  }
 }
