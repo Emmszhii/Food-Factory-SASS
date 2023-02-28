@@ -1,0 +1,33 @@
+.header {
+  a {
+    font-weight: bold;
+  }
+  .branding a {
+    font-size: 2rem;
+    span {
+      color: $clr-primary;
+    }
+  }
+  &__nav {
+    a {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $clr-primary;
+        left: 0;
+        bottom: -0.5rem;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+    }
+    a:hover::after {
+      opacity: 1;
+    }
+    a.active::after {
+      opacity: 1;
+    }
+  }
+}
