@@ -485,6 +485,14 @@ p {
   background-color: #ff9a1e;
   color: #fff;
 }
+.btn-dark {
+  background-color: #2d2d2d;
+  color: #fff;
+  border-color: #2d2d2d;
+}
+.btn-dark:hover {
+  background-color: #141414;
+}
 
 .banner__wrapper {
   min-height: calc(100vh - 60px);
@@ -550,6 +558,8 @@ p {
   border-radius: 50%;
   margin: 0 auto 3rem;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .product__item .item__info {
   display: flex;
@@ -579,4 +589,83 @@ p {
 .product__item a {
   display: block;
   text-align: center;
+}
+
+.product__item.reverse::before {
+  left: unset;
+  right: 0;
+}
+
+.category__tab ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 3rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  max-width: 43rem;
+  width: 100%;
+  margin: 0 auto 6rem;
+}
+.category__tab ul li {
+  min-width: 7rem;
+}
+.category__tab ul li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 3rem;
+}
+.category__tab ul li a:hover {
+  background-color: #ff9a1e;
+  color: #fff;
+}
+.category__tab ul li.active a {
+  background-color: #ff9a1e;
+  color: #fff;
+}
+
+.booking {
+  min-height: 50rem;
+  background-image: url("../img/resto3.jpg");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: right;
+}
+.booking__content {
+  background-color: #ff9a1e;
+  color: #fff;
+  height: 50rem;
+  width: 50%;
+  display: grid;
+  place-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.booking__content::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  height: 100%;
+  width: 40vw;
+  background-color: #ff9a1e;
+}
+.booking__content .inner {
+  max-width: 40rem;
+  width: 100%;
+}
+.booking__content .inner small {
+  text-transform: uppercase;
+  color: #2d2d2d;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+.booking__content .inner h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: bold;
+  margin: 4rem 0 3rem;
+}
+.booking__content .inner p {
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=main.css.map */
