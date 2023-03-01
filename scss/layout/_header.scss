@@ -9,6 +9,9 @@
     }
   }
   &__nav {
+    @include mediaQuery($mobile) {
+      display: none;
+    }
     a {
       position: relative;
       &::after {

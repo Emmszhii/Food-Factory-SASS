@@ -67,6 +67,23 @@ p {
   margin-bottom: 1rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  color: #ff9a1e;
+}
+
 .container {
   width: 100%;
   max-width: 120rem;
@@ -422,6 +439,11 @@ p {
 .header .branding a span {
   color: #ff9a1e;
 }
+@media screen and (max-width: 480px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__nav a {
   position: relative;
 }
@@ -467,26 +489,39 @@ p {
 }
 .footer a {
   color: #fff;
+  cursor: pointer;
+}
+.footer a:hover {
+  color: #ff9a1e;
 }
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
   grid-gap: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+  }
 }
 .footer__item h3 {
   text-transform: uppercase;
   margin-bottom: 3rem;
-  font-weight: bold;
   font-size: 1.8rem;
-}
-.footer__item h3 span {
-  color: #ff9a1e;
 }
 .footer__item p {
   width: 80%;
 }
 .footer__item li {
   margin-bottom: 1.6rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__item p {
+    width: 100%;
+  }
 }
 
 .copyright {
@@ -533,18 +568,23 @@ p {
 .banner__wrapper {
   min-height: calc(100vh - 60px);
 }
+@media screen and (max-width: 480px) {
+  .banner__wrapper {
+    margin-top: 5rem;
+    min-height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+}
 .banner__content {
   max-width: 50rem;
   width: 100%;
 }
 .banner__content h1 {
   font-size: clamp(3rem, 6vw, 6rem);
-  font-weight: bold;
   margin-bottom: 2rem;
   line-height: 1.2;
-}
-.banner__content h1 span {
-  color: #ff9a1e;
 }
 .banner__content p {
   font-size: 1.8rem;
@@ -556,11 +596,17 @@ p {
 
 .product__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
 }
-
-.product__item {
+@media screen and (max-width: 480px) {
+  .product__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.product__cards .product__item {
   box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
   padding: 1.5rem 2rem;
   border-radius: 1rem;
@@ -569,7 +615,7 @@ p {
   isolation: isolate;
   overflow: hidden;
 }
-.product__item::before {
+.product__cards .product__item::before {
   content: "";
   position: absolute;
   left: 0;
@@ -580,54 +626,55 @@ p {
   z-index: -1;
   transition: 0.5s ease;
 }
-.product__item:hover::before {
+.product__cards .product__item:hover::before {
   width: 50%;
   height: 15rem;
 }
-.product__item:hover a {
+.product__cards .product__item:hover a {
   background-color: #ff9a1e;
   color: #fff;
 }
-.product__item img {
+.product__cards .product__item img {
   width: 20rem;
   height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   border-radius: 50%;
   margin: 0 auto 3rem;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.product__item .item__info {
+.product__cards .product__item .item__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
-.product__item .item__info h3 {
+.product__cards .product__item .item__info h3 {
   font-weight: 800;
   font-size: 2.5rem;
 }
-.product__item .item__info h4 {
+.product__cards .product__item .item__info h4 {
   font-weight: bolder;
   font-size: 2rem;
 }
-.product__item .item__info small {
+.product__cards .product__item .item__info small {
   font-weight: bold;
   font-size: 1.2rem;
   opacity: 0.3;
 }
-.product__item .item__review h4 {
+.product__cards .product__item .item__review h4 {
   font-size: 1.4rem;
 }
-.product__item .item__review h4 i {
+.product__cards .product__item .item__review h4 i {
   color: #ff9a1e;
 }
-.product__item a {
+.product__cards .product__item a {
   display: block;
   text-align: center;
 }
-
-.product__item.reverse::before {
+.product__cards .product__item.reverse::before {
   left: unset;
   right: 0;
 }
@@ -668,6 +715,11 @@ p {
   background-size: 50% 100%;
   background-position: right;
 }
+@media screen and (max-width: 480px) {
+  .booking {
+    background-size: 100% 100%;
+  }
+}
 .booking__content {
   background-color: #ff9a1e;
   color: #fff;
@@ -678,6 +730,13 @@ p {
   justify-content: flex-start;
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  .booking__content {
+    padding: 2rem;
+    width: 120%;
+    background-color: rgba(255, 154, 30, 0.8);
+  }
+}
 .booking__content::before {
   content: "";
   position: absolute;
@@ -686,6 +745,11 @@ p {
   height: 100%;
   width: 40vw;
   background-color: #ff9a1e;
+}
+@media screen and (max-width: 480px) {
+  .booking__content::before {
+    background-color: rgba(255, 154, 30, 0.8);
+  }
 }
 .booking__content .inner {
   max-width: 40rem;
@@ -699,7 +763,6 @@ p {
 }
 .booking__content .inner h2 {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: bold;
   margin: 4rem 0 3rem;
 }
 .booking__content .inner p {
@@ -708,8 +771,15 @@ p {
 
 .work .work__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .work .work__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
 }
 .work .work__wrapper .work__card {
   padding: 2rem;
@@ -725,7 +795,6 @@ p {
   font-size: 2rem;
   margin: 2rem 0;
   color: #ff9a1e;
-  font-weight: bold;
 }
 .work .work__wrapper .work__card p {
   opacity: 0.5;
@@ -742,9 +811,25 @@ p {
   border-radius: 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
   height: 100%;
   max-height: 44vh;
   overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .app__wrapper {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    max-height: 65rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .app__img {
+    text-align: center;
+    margin-top: 5rem;
+  }
 }
 .app__content {
   max-width: 55rem;
@@ -752,11 +837,7 @@ p {
 }
 .app__content h2 {
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: bold;
   margin: 4rem 0 3rem;
-}
-.app__content h2 span {
-  color: #ff9a1e;
 }
 .app__content p {
   font-size: 2rem;
@@ -767,8 +848,15 @@ p {
 
 .testimonials__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .testimonials__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
 }
 .testimonials__card {
   display: grid;
@@ -793,13 +881,14 @@ p {
 .testimonials__card img {
   width: 10rem;
   height: 10rem;
-  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  border-radius: 50%;
   transition: 0.5s ease;
 }
 .testimonials__card h4 {
-  font-weight: bold;
   font-size: 2rem;
   line-height: 1;
 }
@@ -833,13 +922,14 @@ p {
 }
 
 .newsletter {
-  min-height: 45rem;
   background-image: linear-gradient(rgba(45, 45, 45, 0.5), rgba(45, 45, 45, 0.5)), url("../img/resto3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 1px;
+  min-height: 45rem;
 }
 .newsletter__wrapper {
   color: #fff;
@@ -849,11 +939,7 @@ p {
   text-align: center;
 }
 .newsletter__wrapper h2 {
-  font-weight: bold;
   font-size: clamp(2rem, 6vw, 5rem);
-}
-.newsletter__wrapper h2 span {
-  color: #ff9a1e;
 }
 .newsletter__wrapper p {
   font-size: 2rem;
@@ -869,12 +955,25 @@ p {
   color: #2d2d2d;
   border-radius: 0.5rem;
 }
+@media screen and (max-width: 480px) {
+  .newsletter__wrapper form input {
+    width: 38rem;
+    margin-top: 1rem;
+  }
+}
 .newsletter__wrapper form button {
   padding: 0.8rem 1.6rem;
   border-radius: 0.5rem;
   background-color: #ff9a1e;
   border: 2px solid #fff;
   transform: translateX(-12px);
+}
+@media screen and (max-width: 480px) {
+  .newsletter__wrapper form button {
+    width: 38rem;
+    margin-top: 1rem;
+    transform: translateX(0);
+  }
 }
 
 .faq__block {
@@ -891,7 +990,6 @@ p {
 }
 .faq__question h3 {
   font-size: 2.5rem;
-  font-weight: bold;
 }
 .faq__question i {
   font-size: 1.8rem;

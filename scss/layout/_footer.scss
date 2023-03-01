@@ -4,29 +4,37 @@
   padding: 6rem 0;
   a {
     color: $clr-light;
+    cursor: pointer;
+    &:hover {
+      color: $clr-primary;
+    }
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    @include gridUneven(1.2fr 1fr 1fr 1fr, 1rem);
+
+    @include mediaQuery($mobile) {
+      @include gridUneven(1fr, 1rem);
+      text-align: center;
+    }
   }
 
   &__item {
     h3 {
       text-transform: uppercase;
       margin-bottom: 3rem;
-      font-weight: bold;
       font-size: 1.8rem;
-      span {
-        color: $clr-primary;
-      }
     }
     p {
       width: 80%;
     }
     li {
       margin-bottom: 1.6rem;
+    }
+    @include mediaQuery($mobile) {
+      p {
+        width: 100%;
+      }
     }
   }
 }
