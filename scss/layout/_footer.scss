@@ -1,0 +1,39 @@
+.footer {
+  background-color: $clr-dark;
+  color: $clr-light;
+  padding: 6rem 0;
+  a {
+    color: $clr-light;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  &__item {
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      font-weight: bold;
+      font-size: 1.8rem;
+      span {
+        color: $clr-primary;
+      }
+    }
+    p {
+      width: 80%;
+    }
+    li {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+.copyright {
+  background-color: $clr-dark;
+  text-align: center;
+  color: $clr-primary;
+  padding: 0.5rem 0;
+}

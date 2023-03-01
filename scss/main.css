@@ -460,6 +460,42 @@ p {
   text-transform: capitalize;
 }
 
+.footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 6rem 0;
+}
+.footer a {
+  color: #fff;
+}
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.footer__item h3 {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.footer__item h3 span {
+  color: #ff9a1e;
+}
+.footer__item p {
+  width: 80%;
+}
+.footer__item li {
+  margin-bottom: 1.6rem;
+}
+
+.copyright {
+  background-color: #2d2d2d;
+  text-align: center;
+  color: #ff9a1e;
+  padding: 0.5rem 0;
+}
+
 .btn {
   background-color: #ff9a1e;
   padding: 0.8rem 1.8rem;
@@ -801,10 +837,76 @@ p {
   background-image: linear-gradient(rgba(45, 45, 45, 0.5), rgba(45, 45, 45, 0.5)), url("../img/resto3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .newsletter__wrapper {
   color: #fff;
-  max-width: 65rem;
+  max-width: 75rem;
   width: 100%;
   margin: 0 auto;
+  text-align: center;
+}
+.newsletter__wrapper h2 {
+  font-weight: bold;
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+.newsletter__wrapper h2 span {
+  color: #ff9a1e;
+}
+.newsletter__wrapper p {
+  font-size: 2rem;
+  opacity: 0.8;
+  margin: 2rem 0;
+}
+.newsletter__wrapper form input {
+  text-align: left;
+  padding: 0.8rem 1.6rem;
+  background-color: #fff;
+  width: 28rem;
+  border: 2px solid #fff;
+  color: #2d2d2d;
+  border-radius: 0.5rem;
+}
+.newsletter__wrapper form button {
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  background-color: #ff9a1e;
+  border: 2px solid #fff;
+  transform: translateX(-12px);
+}
+
+.faq__block {
+  border-radius: 2rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 4rem;
+}
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+.faq__question h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.faq__question i {
+  font-size: 1.8rem;
+  transition: 0.5s ease;
+}
+.faq__answer {
+  padding: 0.5rem 3rem;
+  height: auto;
+  max-height: 0rem;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+.faq__question.open i {
+  transform: rotate(45deg);
+}
+.faq__answer.open {
+  max-height: 20rem;
 }/*# sourceMappingURL=main.css.map */

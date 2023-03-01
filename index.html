@@ -451,23 +451,143 @@
         </div>
       </div>
     </section>
-
     <section class="newsletter">
       <div class="newsletter__wrapper">
-        <h2>Subscribe To Our <span>NewsLetter</span></h2>
+        <h2>Subscribe To Our <span>Newsletter</span></h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quam
           iure sint hic. Laudantium, nam.
         </p>
         <form action="">
-          <input type="text" />
-          <button>Subscribe</button>
+          <input type="email" placeholder="Enter your Email Address..." />
+          <button class="">Subscribe</button>
         </form>
       </div>
     </section>
+    <section class="faq py--6">
+      <div class="container">
+        <div class="block__header">
+          <span>FAQS</span>
+          <h2>Frequently Asked <span>Questions</span></h2>
+        </div>
+
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+              quas?
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum?
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At, fugit
+              consectetur! Est?
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perspiciatis, nostrum.
+            </p>
+          </div>
+        </div>
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+              fugit ullam?
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              maxime.
+            </p>
+          </div>
+        </div>
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
+              quas?
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq__answer">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero,
+              nemo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__item">
+            <h3>FOOD <span>FACTORY</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              fugiat sed, amet similique cumque nostrum necessitatibus!
+            </p>
+          </div>
+          <div class="footer__item">
+            <h3>Food Factory</h3>
+            <ul>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Mobile App</a></li>
+              <li><a href="#">Booking</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Get Help</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <p class="copyright">
+      Copyrigt &copy; Food Factory 2022 All Right Reserved
+    </p>
 
     <script>
       const hearts = document.querySelectorAll(".fa-heart");
+      const faqQuestions = document.querySelectorAll(".faq__question");
+
       hearts.forEach((heart) => {
         heart.addEventListener("click", () => {
           if (heart.classList.contains("far")) {
@@ -479,6 +599,16 @@
             heart.classList.toggle("far");
             heart.style.color = "black";
           }
+        });
+      });
+
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          question.classList.toggle("open");
+          question.nextElementSibling.classList.toggle("open");
+
+          // icon.classList.toggle("fa-plus");
+          // icon.classList.toggle("fa-minus");
         });
       });
     </script>
