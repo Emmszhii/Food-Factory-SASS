@@ -143,7 +143,6 @@
 }
 
 // Booking
-
 .booking {
   min-height: 50rem;
   background-image: url("../img/resto3.jpg");
@@ -185,6 +184,67 @@
       p {
         margin-bottom: 3rem;
       }
+    }
+  }
+}
+
+// Work
+
+.work__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  .work__card {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    text-align: center;
+    i {
+      color: $clr-primary;
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2rem;
+      margin: 2rem 0;
+      color: $clr-primary;
+      font-weight: bold;
+    }
+    p {
+      opacity: 0.5;
+      font-weight: bold;
+    }
+  }
+}
+
+// App
+
+.app {
+  &__wrapper {
+    padding: 4rem 10rem;
+    background-color: lighten($clr-primary-light, 20);
+    border-radius: 3rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+  }
+  &__content {
+    max-width: 55rem;
+    width: 100%;
+    h2 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: bold;
+      margin: 4rem 0 3rem;
+      span {
+        color: $clr-primary;
+      }
+    }
+    p {
+      font-size: 2rem;
+      opacity: 0.5;
+      margin-bottom: 4rem;
+      font-weight: bold;
     }
   }
 }
