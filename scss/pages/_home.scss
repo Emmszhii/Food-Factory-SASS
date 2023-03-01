@@ -220,13 +220,13 @@
 
 .app {
   &__wrapper {
-    padding: 4rem 10rem;
+    padding: 2rem 10rem;
     background-color: lighten($clr-primary-light, 20);
     border-radius: 3rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     height: 100%;
-    max-height: 50vh;
+    max-height: 44vh;
     overflow: hidden;
   }
   &__content {
@@ -246,5 +246,77 @@
       margin-bottom: 4rem;
       font-weight: bold;
     }
+  }
+}
+
+// Testimonials
+.testimonials {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    grid-gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    padding: 1rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background-color: $clr-primary;
+      top: 13px;
+      left: 13px;
+      z-index: -1;
+    }
+    img {
+      width: 13rem;
+      height: 12rem;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: 0.5s ease;
+    }
+    h4 {
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 1;
+    }
+    small {
+      font-size: 1.2rem;
+      opacity: 0.5;
+    }
+    ul {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+      i {
+        color: $clr-primary;
+      }
+    }
+    p {
+      opacity: 0.8;
+    }
+    .inner {
+      width: 12rem;
+      height: 12rem;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 5px solid $clr-primary;
+    }
+  }
+
+  &__card:hover img {
+    transform: scale(1.2);
+  }
+
+  &__img {
+    padding: 0.5rem;
   }
 }
