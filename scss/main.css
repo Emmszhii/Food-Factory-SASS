@@ -670,30 +670,34 @@ p {
   margin-bottom: 3rem;
 }
 
-.work__wrapper {
+.work .work__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
 }
-.work__wrapper .work__card {
+.work .work__wrapper .work__card {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
   text-align: center;
 }
-.work__wrapper .work__card i {
+.work .work__wrapper .work__card i {
   color: #ff9a1e;
   font-size: 3rem;
 }
-.work__wrapper .work__card h3 {
+.work .work__wrapper .work__card h3 {
   font-size: 2rem;
   margin: 2rem 0;
   color: #ff9a1e;
   font-weight: bold;
 }
-.work__wrapper .work__card p {
+.work .work__wrapper .work__card p {
   opacity: 0.5;
   font-weight: bold;
+}
+.work .work__wrapper .work__card:hover {
+  transform: scale(1.2);
+  transition: 0.5s ease;
 }
 
 .app__wrapper {
@@ -751,8 +755,8 @@ p {
   z-index: -1;
 }
 .testimonials__card img {
-  width: 13rem;
-  height: 12rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -779,8 +783,8 @@ p {
   opacity: 0.8;
 }
 .testimonials__card .inner {
-  width: 12rem;
-  height: 12rem;
+  width: 11rem;
+  height: 11rem;
   overflow: hidden;
   border-radius: 50%;
   border: 5px solid #ff9a1e;
@@ -790,4 +794,17 @@ p {
 }
 .testimonials__img {
   padding: 0.5rem;
+}
+
+.newsletter {
+  min-height: 45rem;
+  background-image: linear-gradient(rgba(45, 45, 45, 0.5), rgba(45, 45, 45, 0.5)), url("../img/resto3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.newsletter__wrapper {
+  color: #fff;
+  max-width: 65rem;
+  width: 100%;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */

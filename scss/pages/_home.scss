@@ -25,7 +25,6 @@
 }
 
 // PRODUCT
-
 .product__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -108,7 +107,6 @@
 }
 
 // Category
-
 .category__tab {
   ul {
     display: flex;
@@ -189,35 +187,39 @@
 }
 
 // Work
-
-.work__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2rem;
-  .work__card {
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: $shadow;
-    text-align: center;
-    i {
-      color: $clr-primary;
-      font-size: 3rem;
-    }
-    h3 {
-      font-size: 2rem;
-      margin: 2rem 0;
-      color: $clr-primary;
-      font-weight: bold;
-    }
-    p {
-      opacity: 0.5;
-      font-weight: bold;
+.work {
+  .work__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    .work__card {
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: $shadow;
+      text-align: center;
+      i {
+        color: $clr-primary;
+        font-size: 3rem;
+      }
+      h3 {
+        font-size: 2rem;
+        margin: 2rem 0;
+        color: $clr-primary;
+        font-weight: bold;
+      }
+      p {
+        opacity: 0.5;
+        font-weight: bold;
+      }
+      &:hover {
+        transform: scale(1.2);
+        transition: 0.5s ease;
+      }
     }
   }
 }
 
 // App
-
 .app {
   &__wrapper {
     padding: 2rem 10rem;
@@ -277,8 +279,8 @@
       z-index: -1;
     }
     img {
-      width: 13rem;
-      height: 12rem;
+      width: 10rem;
+      height: 10rem;
       border-radius: 50%;
       object-fit: cover;
       transition: 0.5s ease;
@@ -304,8 +306,8 @@
       opacity: 0.8;
     }
     .inner {
-      width: 12rem;
-      height: 12rem;
+      width: 11rem;
+      height: 11rem;
       overflow: hidden;
       border-radius: 50%;
       border: 5px solid $clr-primary;
@@ -318,5 +320,21 @@
 
   &__img {
     padding: 0.5rem;
+  }
+}
+
+// Newsletter
+.newsletter {
+  min-height: 45rem;
+  background-image: linear-gradient(rgba($clr-dark, 0.5), rgba($clr-dark, 0.5)),
+    url("../img/resto3.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__wrapper {
+    color: $clr-light;
+    max-width: 65rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }
