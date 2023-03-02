@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
   </head>
   <body>
     <!-- HEADER -->
@@ -40,21 +44,21 @@
           <div class="info__images">
             <!-- MAIN IMG -->
             <div class="info__image__lg">
-              <img src="../img/b4-bg.png" alt="" />
+              <img src="../img/b4.png" alt="" />
             </div>
             <!-- THUMBNAILS -->
             <div class="info__image__variation">
               <button class="thumbnail">
-                <img src="../img/b4.png" alt="" />
-                <h3>Burger 1</h3>
+                <img src="../img/ba3.png" alt="" />
+                <h3>Supper Booger</h3>
               </button>
               <button class="thumbnail">
-                <img src="../img/b4.png" alt="" />
-                <h3>Burger 2</h3>
+                <img src="../img/ba1.png" alt="" />
+                <h3>Boogybody</h3>
               </button>
               <button class="thumbnail">
-                <img src="../img/b4.png" alt="" />
-                <h3>Burger 3</h3>
+                <img src="../img/ba2.png" alt="" />
+                <h3>Booger</h3>
               </button>
             </div>
           </div>
@@ -104,6 +108,50 @@
         </div>
       </div>
     </section>
+    <!-- RELATED FOODS -->
+    <section class="related__foods">
+      <div class="container">
+        <h3>Related Foods</h3>
+        <div class="related__foods__wrapper">
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+          <div class="related__foods__card">
+            <img src="../img/b4.png" alt="" />
+            <h3>Burger 1</h3>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
@@ -146,5 +194,44 @@
     <p class="copyright">
       Copyright &copy; Food Factory 2022 All Right Reserved
     </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const bigImg = document.querySelector(".info__image__lg img");
+      const h1 = document.querySelector("h1");
+      thumbnails.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const currentImg = item.querySelector("img").getAttribute("src");
+          const currentText = item.querySelector("h3").textContent;
+
+          h1.textContent = currentText;
+          bigImg.setAttribute("src", currentImg);
+        });
+      });
+      var slider = tns({
+        container: ".related__foods__wrapper",
+        items: 6,
+        mouseDrag: true,
+        controlsText: [
+          '<i class="fa fa-angle-left"></i>',
+          '<i class="fa fa-angle-right"></i>',
+        ],
+        center: true,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          481: {
+            items: 3,
+          },
+          700: {
+            items: 4,
+          },
+          900: {
+            items: 6,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
