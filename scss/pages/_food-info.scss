@@ -1,0 +1,56 @@
+.info {
+  &__wrapper {
+    @include grid(2, 10rem);
+  }
+  &__image__lg {
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: $shadow;
+    margin-bottom: 8rem;
+    background-color: $clr-light;
+  }
+  &__image__variation {
+    @include grid(3, 2rem);
+    button {
+      padding: 2rem;
+      background-color: $clr-light;
+      border-radius: 2rem;
+      box-shadow: $shadow;
+      text-align: center;
+      height: 12rem;
+      img {
+        border-radius: 50%;
+        @include imgFit(10rem, 10rem);
+        transform: translateY(-5rem);
+      }
+      h3 {
+        transform: translateY(-4rem);
+      }
+    }
+  }
+  &__content__header {
+    h1 {
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+    .meta,
+    ul {
+      display: flex;
+      gap: 2rem;
+    }
+    ul {
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      li i {
+        color: $clr-primary;
+      }
+      li:last-child i {
+        color: #ccc;
+      }
+    }
+    small {
+      color: #ccc;
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+    }
+  }
+}
