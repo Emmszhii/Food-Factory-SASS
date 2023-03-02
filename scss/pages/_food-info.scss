@@ -9,8 +9,8 @@
     margin-bottom: 8rem;
     background-color: $clr-light;
     transition: 0.5s ease;
-    img:hover {
-      transform: scale(1.2);
+    &:hover img {
+      transform: scale(1.5);
     }
   }
   &__image__variation {
@@ -22,16 +22,18 @@
       box-shadow: $shadow;
       text-align: center;
       height: 12rem;
+      cursor: pointer;
       img {
         border-radius: 50%;
         @include imgFit(10rem, 10rem);
         transform: translateY(-5rem);
         transition: 0.5s ease;
-        &:hover {
-          transform: scale(1.6);
-        }
+      }
+      &:hover img {
+        transform: translateY(-5rem) scale(1.5);
       }
       h3 {
+        z-index: 1;
         transform: translateY(-4rem);
       }
     }

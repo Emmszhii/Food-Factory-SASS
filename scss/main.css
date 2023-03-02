@@ -1022,8 +1022,8 @@ h6 span {
   background-color: #fff;
   transition: 0.5s ease;
 }
-.info__image__lg img:hover {
-  transform: scale(1.2);
+.info__image__lg:hover img {
+  transform: scale(1.5);
 }
 .info__image__variation {
   display: grid;
@@ -1037,6 +1037,7 @@ h6 span {
   box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
   text-align: center;
   height: 12rem;
+  cursor: pointer;
 }
 .info__image__variation button img {
   border-radius: 50%;
@@ -1049,10 +1050,11 @@ h6 span {
   transform: translateY(-5rem);
   transition: 0.5s ease;
 }
-.info__image__variation button img:hover {
-  transform: scale(1.6);
+.info__image__variation button:hover img {
+  transform: translateY(-5rem) scale(1.5);
 }
 .info__image__variation button h3 {
+  z-index: 1;
   transform: translateY(-4rem);
 }
 .info__content__header h1 {
