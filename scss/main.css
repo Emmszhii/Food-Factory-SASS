@@ -434,6 +434,9 @@ h6 span {
   align-items: center;
 }
 
+.header {
+  padding: 1.5rem 0;
+}
 .header a {
   font-weight: bold;
 }
@@ -443,19 +446,27 @@ h6 span {
 .header .branding a span {
   color: #ff9a1e;
 }
-.header .btn__back {
-  display: none;
-}
-@media screen and (max-width: 480px) {
-  .header .btn__back {
-    display: block;
-  }
-}
 .header .btn__show {
   position: absolute;
   top: 1rem;
   right: 3rem;
   font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .header .btn__show {
+    display: block;
+  }
+}
+.header .btn__back {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .header .btn__back {
+    display: block;
+  }
 }
 @media screen and (max-width: 480px) {
   .header__nav {

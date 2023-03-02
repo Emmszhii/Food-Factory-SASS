@@ -1,4 +1,5 @@
 .header {
+  padding: 1.5rem 0;
   a {
     font-weight: bold;
   }
@@ -8,18 +9,25 @@
       color: $clr-primary;
     }
   }
-  .btn__back {
-    display: none;
-    @include mediaQuery($mobile) {
-      display: block;
-    }
-  }
   .btn__show {
     position: absolute;
     top: 1rem;
     right: 3rem;
     font-size: 3rem;
+    cursor: pointer;
+    display: none;
+    @include mediaQuery($mobile) {
+      display: block;
+    }
   }
+  .btn__back {
+    display: none;
+    cursor: pointer;
+    @include mediaQuery($mobile) {
+      display: block;
+    }
+  }
+
   &__nav {
     @include mediaQuery($mobile) {
       position: fixed;
